@@ -1,5 +1,5 @@
 name: leviathan
-description: A new Flutter package project.
+description: UIKit project from Kratos.
 version: 0.0.1
 homepage: "https://github.com/VB10/leviathan"
 
@@ -19,8 +19,8 @@ dependencies:
   cached_network_image: ^3.2.1
   font_awesome_flutter: ^10.1.0
   kartal: ^2.8.0
-  intl_phone_number_input: ^0.7.0+2
   shimmer: ^2.0.0
+  collection: ^1.16.0
 
 dev_dependencies:
   flutter_test:

@@ -7,5 +7,4 @@ export './stack/full_view_stack.dart';
 export './tabbar/custom_tab_bar.dart';
 export './text_field/index.dart';
 export 'custom_network_image.dart';
-export 'custom_phone_number_input.dart';
 export 'divider/gray_divider.dart';
