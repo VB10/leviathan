@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 
 class CommunityAlertDialog extends StatelessWidget {
-  final String title;
-  final String content;
-  final String buttonText;
-  final VoidCallback? onButtonPressed;
   const CommunityAlertDialog({
-    Key? key,
+    super.key,
     required this.title,
     required this.content,
     required this.buttonText,
     this.onButtonPressed,
-  }) : super(key: key);
+  });
+  final String title;
+  final String content;
+  final String buttonText;
+  final VoidCallback? onButtonPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +28,17 @@ class CommunityAlertDialog extends StatelessWidget {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: context.colorScheme.primary,
-                shape: RoundedRectangleBorder(borderRadius: context.lowBorderRadius),
+                shape: RoundedRectangleBorder(
+                  borderRadius: context.lowBorderRadius,
+                ),
               ),
               onPressed: onButtonPressed,
-              child: Text(style: TextStyle(color: context.appTheme.scaffoldBackgroundColor), buttonText),
+              child: Text(
+                style: TextStyle(
+                  color: context.appTheme.scaffoldBackgroundColor,
+                ),
+                buttonText,
+              ),
             ),
           ),
         ],

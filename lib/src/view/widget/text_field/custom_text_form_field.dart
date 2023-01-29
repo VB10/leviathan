@@ -69,7 +69,7 @@ class CustomTextFormField extends StatelessWidget {
         autofillHints: autoFillHints ?? [AutofillHints.addressCity],
         autovalidateMode: AutovalidateMode.onUserInteraction,
         validator: validator,
-        style: context.textTheme.subtitle1?.copyWith(
+        style: context.textTheme.titleMedium?.copyWith(
           color: context.colorScheme.secondary,
           fontSize: WidgetSizes.spacingS,
         ),
@@ -91,11 +91,11 @@ class CustomTextFormField extends StatelessWidget {
           ? _RedDotWidget(hintText: _helperText, isRequired: isRequired)
           : null,
       labelStyle: labelStyle ??
-          context.textTheme.bodyText1?.copyWith(
+          context.textTheme.bodyLarge?.copyWith(
             color: context.appTheme.buttonTheme.colorScheme?.shadow,
           ),
       border: outlineInputBorder(context),
-      hintStyle: context.textTheme.bodyText2?.copyWith(
+      hintStyle: context.textTheme.bodyMedium?.copyWith(
         fontWeight: FontWeight.w400,
         color: context.colorScheme.onTertiary,
       ),
@@ -128,7 +128,7 @@ class _RedDotWidget extends StatelessWidget {
         children: [
           TextSpan(
             text: (isRequired ?? false) ? ' ${SpecialKeys.asterisk}' : '',
-            style: context.textTheme.bodyText1?.copyWith(
+            style: context.textTheme.bodyLarge?.copyWith(
               color: context.colorScheme.error,
             ),
           )

@@ -67,7 +67,7 @@ class _CustomTabBarState extends State<CustomTabBar> {
             icon: e.activeIcon,
             inactiveIcon: e.inactiveIcon,
             title: e.title,
-            textStyle: context.textTheme.headline6?.copyWith(
+            textStyle: context.textTheme.titleLarge?.copyWith(
               fontWeight: FontWeight.w600,
             ),
           ),

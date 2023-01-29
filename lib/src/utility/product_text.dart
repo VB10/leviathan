@@ -4,17 +4,17 @@ import 'package:kartal/kartal.dart';
 class ProductText extends Text {
   const ProductText(super.data, [Key? key]) : super(key: key);
 
-  /// Default headline 1
+  /// Default displayLarge
   ///
   /// [fontSize]: 32, [fontWeight]: FontWeight.w800
-  ProductText.headline1(
+  ProductText.displayLarge(
     super.data, {
     super.key,
     required BuildContext context,
     Color? color,
-  }) : super(style: context.textTheme.headline1?.copyWith(color: color));
+  }) : super(style: context.textTheme.displayLarge?.copyWith(color: color));
 
-  /// Default headline 2
+  /// Default displayMedium
   ///
   /// [fontSize]: 22, [fontWeight]: FontWeight.w800
   ProductText.headline2(
@@ -24,15 +24,15 @@ class ProductText extends Text {
     int? maxLine,
     Color? color,
   }) : super(
-          style: context.textTheme.headline2?.copyWith(color: color),
+          style: context.textTheme.displayMedium?.copyWith(color: color),
           maxLines: maxLine ?? 1,
           overflow: TextOverflow.ellipsis,
         );
 
-  /// Custom headline3
+  /// Custom displaySmall
   ///
   /// [fontSize]: 18, [fontWeight]: W800, [color]: secondary
-  ProductText.headline3(
+  ProductText.displaySmall(
     super.data, {
     required BuildContext context,
     super.key,
@@ -41,14 +41,14 @@ class ProductText extends Text {
     Color? color,
     super.textAlign,
   }) : super(
-          style: context.textTheme.headline3?.copyWith(
+          style: context.textTheme.displaySmall?.copyWith(
             decoration: (underLine ?? false) ? TextDecoration.underline : null,
             color: color,
           ),
           maxLines: maxLine,
         );
 
-  /// Custom headline3
+  /// Custom displaySmall
   ///
   /// color: secondary
   ProductText.headline3Secondary(
@@ -56,7 +56,7 @@ class ProductText extends Text {
     super.key,
     required BuildContext context,
   }) : super(
-          style: context.textTheme.headline3
+          style: context.textTheme.displaySmall
               ?.copyWith(color: context.colorScheme.secondary),
         );
 
@@ -65,7 +65,7 @@ class ProductText extends Text {
     super.key,
     required BuildContext context,
   }) : super(
-          style: context.textTheme.headline4
+          style: context.textTheme.headlineMedium
               ?.copyWith(color: context.colorScheme.secondary),
         );
 
@@ -74,7 +74,7 @@ class ProductText extends Text {
     super.key,
     required BuildContext context,
   }) : super(
-          style: context.textTheme.headline5
+          style: context.textTheme.headlineSmall
               ?.copyWith(color: context.colorScheme.onBackground),
         );
 
@@ -87,7 +87,7 @@ class ProductText extends Text {
     required BuildContext context,
     FontWeight? fontWeight,
   }) : super(
-          style: context.textTheme.headline3?.copyWith(
+          style: context.textTheme.displaySmall?.copyWith(
             color: context.colorScheme.secondary,
             fontWeight: fontWeight ?? FontWeight.w600,
           ),
@@ -106,7 +106,7 @@ class ProductText extends Text {
     TextStyle? textStyle,
   }) : super(
           style: textStyle ??
-              context.textTheme.headline5?.copyWith(
+              context.textTheme.headlineSmall?.copyWith(
                 fontWeight: fontWeight ?? FontWeight.w900,
               ),
           maxLines: maxLine,
@@ -121,7 +121,8 @@ class ProductText extends Text {
     required BuildContext context,
     FontWeight? fontWeight,
   }) : super(
-          style: context.textTheme.headline5?.copyWith(fontWeight: fontWeight),
+          style:
+              context.textTheme.headlineSmall?.copyWith(fontWeight: fontWeight),
         );
 
   /// Headline5 with grey
@@ -137,7 +138,7 @@ class ProductText extends Text {
   }) : super(
           maxLines: maxLine,
           overflow: TextOverflow.ellipsis,
-          style: context.textTheme.headline5?.copyWith(
+          style: context.textTheme.headlineSmall?.copyWith(
             color: color ?? context.colorScheme.secondary,
             fontWeight: weight,
           ),
@@ -153,7 +154,7 @@ class ProductText extends Text {
     TextOverflow super.overflow = TextOverflow.ellipsis,
   }) : super(
           maxLines: maxLine,
-          style: context.textTheme.headline5
+          style: context.textTheme.headlineSmall
               ?.copyWith(fontWeight: FontWeight.w700, color: color),
         );
 
@@ -170,7 +171,7 @@ class ProductText extends Text {
     int? maxLine,
   }) : super(
           maxLines: maxLine,
-          style: context.textTheme.subtitle1?.copyWith(
+          style: context.textTheme.titleMedium?.copyWith(
             color: color,
             fontWeight: fontWeight,
           ),
@@ -188,7 +189,7 @@ class ProductText extends Text {
     super.maxLines,
   }) : super(
           style: textStyle ??
-              context.textTheme.subtitle2?.copyWith(
+              context.textTheme.titleSmall?.copyWith(
                 fontWeight: FontWeight.bold,
                 color: color ?? context.colorScheme.onPrimary,
               ),
@@ -205,7 +206,7 @@ class ProductText extends Text {
     TextStyle? textStyle,
   }) : super(
           style: textStyle ??
-              context.textTheme.subtitle2?.copyWith(
+              context.textTheme.titleSmall?.copyWith(
                 color: context.colorScheme.secondary,
                 fontWeight: weight,
               ),
@@ -217,7 +218,7 @@ class ProductText extends Text {
     required BuildContext context,
     Color? color,
   }) : super(
-          style: context.textTheme.bodyText1
+          style: context.textTheme.bodyLarge
               ?.copyWith(color: color ?? context.colorScheme.primary),
         );
 
@@ -228,7 +229,7 @@ class ProductText extends Text {
     Color? color,
     FontWeight? fontWeight,
   }) : super(
-          style: context.textTheme.bodyText1?.copyWith(
+          style: context.textTheme.bodyLarge?.copyWith(
             color: color,
             fontWeight: fontWeight,
           ),
